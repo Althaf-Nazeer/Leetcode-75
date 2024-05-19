@@ -31,10 +31,32 @@ Constraints:
 s contains English letters (upper-case and lower-case), digits, and spaces ' '.
 There is at least one word in s.
 """
-s=input("enter the string : ")
-l=s.split(" ")
-n=len(l)
-for i in range (n-1,-1,-1):
-    print(l[i], end=" ")
+
+
+
+
+def reverseWords(s: str) -> str:
+    # Step 1: Strip leading and trailing spaces
+    s = s.strip()
+    
+    # Step 2: Split the string by spaces
+    words = s.split()
+    
+    # Step 3: Reverse the list of words
+    words.reverse()
+    
+    # Step 4: Join the words with a single space
+    return ' '.join(words)
+
+# Example usage:
+s1 = "the sky is blue"
+print(reverseWords(s1))  # Output: "blue is sky the"
+
+s2 = "  hello world  "
+print(reverseWords(s2))  # Output: "world hello"
+
+s3 = "a good   example"
+print(reverseWords(s3))  # Output: "example good a"
+
 
 

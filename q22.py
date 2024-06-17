@@ -1,4 +1,4 @@
- """
+  """
 Two strings are considered close if you can attain one from the other using the following operations:
 
 Operation 1: Swap any two existing characters.
